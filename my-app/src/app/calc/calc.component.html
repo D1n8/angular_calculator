@@ -1,0 +1,8 @@
+<h1>Калькулятор</h1>
+<input type="number" [(ngModel)]="calcGroup.firstNum">
+<select [(ngModel)]="calcGroup.operation">
+  <option [value]="oper.value" *ngFor="let oper of calcOperations | keyvalue">{{oper.value}}</option>
+</select>
+<input type="number" [(ngModel)]="calcGroup.secondNum">
+<button (click)="calculate()">Посчитать</button>
+<p>Результат: {{result}}</p>
